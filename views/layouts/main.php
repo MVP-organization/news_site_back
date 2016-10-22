@@ -38,16 +38,18 @@ AppAsset::register($this);
         'items' => [
             ['label' => 'Домашняя страничка', 'url' => ['/site/index']],
 
-    ['label'=>'Панель управления','url'=>['blog/default/index']],
-      
-['label'=>'О сайте','url'=>['site/about']],
-['label'=>'Связь с нами','url'=>['site/contact']],
+
             Yii::$app->user->isGuest ? (
                 ['label' => 'Логин', 'url' => ['/site/login']]
             ) : (
 
                 '<li>'
+                . Html::beginForm(['label'=>'Панель управления','url'=>['blog/default/index']])
+      
+. Html::beginForm(['label'=>'О сайте','url'=>['site/about']])
+. Html::beginForm(['label'=>'Связь с нами','url'=>['site/contact']])
                 . Html::beginForm(['/site/logout'], 'post', ['class' => 'navbar-form'])
+
                 . Html::submitButton(
                     'Выход (' . Yii::$app->user->identity->username . ')',
                     ['class' => 'btn btn-link']
