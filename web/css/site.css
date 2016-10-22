@@ -12,7 +12,17 @@ body {
 
 .wrap > .container {
     padding: 70px 15px 20px;
+
 }
+ 
+ .thumbnail2
+ {
+height: 200px;
+width: 180px;
+
+ }
+
+
 
 .footer {
     height: 60px;

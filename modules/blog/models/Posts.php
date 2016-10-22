@@ -48,10 +48,10 @@ class Posts extends \yii\db\ActiveRecord
     {
         return [
             'id' => 'ID',
-            'title' => 'Title',
-            'text' => 'Text',
-            'text_preview' => 'Text Preview',
-            'img' => 'Img',
+            'title' => 'Название',
+            'text' => 'Текст',
+            'text_preview' => 'Краткое содержание',
+            'img' => 'Image',
         ];
     }
 

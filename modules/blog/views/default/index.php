@@ -1,15 +1,9 @@
 
 <?php
 use yii\web\HttpException;
-if( Yii::$app->user->identity->username=='') throw new HttpException('404', 'Доступ до цієї сторінки заборонений не авторизованому користувачеві');
+if( Yii::$app->user->identity->username=='') throw new HttpException('Доступ к этой страничке запрещен');
 
-   // $url='site/index';
-   // Yii::$app->getResponse()->redirect($url)->send();
-   // return;
-
-   // \yii\helpers\Url::to(['site/index']);
-   // echo 'sdfsdfsdfsdfsdf';
-
+  
 use yii\helpers\Html;
 use yii\grid\GridView;
 
@@ -17,7 +11,7 @@ use yii\grid\GridView;
 /* @var $searchModel app\modules\blog\models\PostsSearch */
 /* @var $dataProvider yii\data\ActiveDataProvider */
 
-$this->title = 'Posts';
+$this->title = 'Посты';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="posts-index">
@@ -26,17 +20,17 @@ $this->params['breadcrumbs'][] = $this->title;
     <?php // echo $this->render('_search', ['model' => $searchModel]); ?>
 
     <p>
-        <?= Html::a('Create Posts', ['create'], ['class' => 'btn btn-success']) ?>
+        <?= Html::a('Создать пост', ['create'], ['class' => 'btn btn-success']) ?>
     </p>
     <div class="row">
     <?php foreach ($posts as $arr){ ?>
         <div class="col-sm-6 col-md-4">
-            <div class="thumbnail">
-                <img src="<?= $arr->img ?>" alt="...">
+            <div class="thumbnail2">
+                <img weight='10' height='100' src="<?= $arr->img ?>" alt="...">
                 <div class="caption">
                     <h3><?= $arr->title ?></h3>
                     <p><?= $arr->text_preview ?></p>
-                    <p><a href="/blog/default/view?id=<?= $arr->id ?>" class="btn btn-primary" role="button">Update</a> </p>
+                    <p><a href="/blog/default/view?id=<?= $arr->id ?>" class="btn btn-primary" role="button">Редактировать</a> </p>
                 </div>
             </div>
         </div>

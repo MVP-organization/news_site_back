@@ -47,6 +47,7 @@ class DefaultController extends Controller
      * Lists all Posts models.
      * @return mixed
      */
+
     public function actionIndex()
     {
        $AllPosts=Posts::find()->all();
