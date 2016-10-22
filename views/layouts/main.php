@@ -37,19 +37,19 @@ AppAsset::register($this);
         'options' => ['class' => 'navbar-nav navbar-right'],
         'items' => [
             ['label' => 'Домашняя страничка', 'url' => ['/site/index']],
-<<<<<<< HEAD
+//<<<<<<< HEAD
 ['label'=>'О сайте','url'=>['site/about']],
             ['label'=>'Связь с нами','url'=>['site/contact']],
-=======
+//=======
 
->>>>>>> 3849ba96a07debc3530446cf47a3eaf460832fbb
+//>>>>>>> 3849ba96a07debc3530446cf47a3eaf460832fbb
 
             Yii::$app->user->isGuest ? (
                 ['label' => 'Логин', 'url' => ['/site/login']]
             ) : (
 
                 '<li>'
-<<<<<<< HEAD
+//<<<<<<< HEAD
 
                
  . Html::beginForm(['blog/default/index'], 'post', ['class' => 'navbar-form'])
@@ -60,12 +60,12 @@ AppAsset::register($this);
                    
 . Html::endForm()
             
-=======
+//=======
                 . Html::beginForm(['label'=>'Панель управления','url'=>['blog/default/index']])
       
 . Html::beginForm(['label'=>'О сайте','url'=>['site/about']])
 . Html::beginForm(['label'=>'Связь с нами','url'=>['site/contact']])
->>>>>>> 3849ba96a07debc3530446cf47a3eaf460832fbb
+//>>>>>>> 3849ba96a07debc3530446cf47a3eaf460832fbb
                 . Html::beginForm(['/site/logout'], 'post', ['class' => 'navbar-form'])
 
                 . Html::submitButton(
