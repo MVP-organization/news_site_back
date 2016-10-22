@@ -72,7 +72,7 @@ class SiteController extends Controller
         $id=\Yii::$app->request->get('id');
 
         $post=Posts::findOne($id);
-        if (empty($post)) throw new HttpException('404', 'такої сторінки не існує');
+        if (empty($post)) throw new HttpException('404', 'такой страницы не существует');
         return $this->render('view',compact('post'));
     }
     /**
