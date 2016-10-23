@@ -24,6 +24,7 @@ class AppAsset extends AssetBundle
         'css/ie-hacks.css',
         'css/superfish-custom.css',
         'css/jquery.tabs.css',
+        'css/jquery.tabs-ie.css',
 
     ];
     public $js = [
@@ -31,6 +32,16 @@ class AppAsset extends AssetBundle
         'js/jquery_1.4.2.js',
         'js/jqueryui.js',
         'js/easing.js',
+        'js/DD_belatedPNG.js',
+        'js/jquery.cycle.all.js',
+        'js/tooltip/jquery.tools.min.js',
+        'js/jquery.tabs/jquery.tabs.pack.js',
+        'js/filterable.pack.js',
+        'js/prettyPhoto/js/jquery.prettyPhoto.js',
+       // 'js/custom.js',
+      'js/jQuery.equalHeights.js',
+        'js/superfish-1.4.8/js/hoverIntent.js',
+        'js/superfish-1.4.8/js/superfish.js',
     ];
     public $depends = [
         'yii\web\YiiAsset',
