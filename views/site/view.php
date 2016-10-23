@@ -15,7 +15,6 @@ use yii\widgets\DetailView;
     <meta name="keywords" content="" />
 
     <title>Muro</title>
-
     <!-- CSS -->
     <link rel="stylesheet" href="css/style.css" type="text/css" media="screen" />
     <link rel="stylesheet" href="css/blue.css" type="text/css" media="screen" />
@@ -142,3 +141,8 @@ $this->params['breadcrumbs'][] = $this->title;
 
 </body>
 </html>
+
+
+
+
+
