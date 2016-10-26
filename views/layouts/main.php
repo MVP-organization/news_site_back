@@ -27,7 +27,7 @@ AppAsset::register($this);
 <div class="wrap">
     <?php
     NavBar::begin([
-        'brandLabel' => 'Мой блог',
+        'brandLabel' => 'Новини',
         'brandUrl' => Yii::$app->homeUrl,
         'options' => [
             'class' => 'navbar-inverse navbar-fixed-top',
@@ -40,20 +40,21 @@ AppAsset::register($this);
 ['label'=>'О сайте','url'=>['site/about']],
             ['label'=>'Связь с нами','url'=>['site/contact']],
 
+
             Yii::$app->user->isGuest ? (
                 ['label' => 'Логин', 'url' => ['/site/login']]
             ) : (
                 '<li>'
 
-               
- . Html::beginForm(['blog/default/index'], 'post', ['class' => 'navbar-form'])
+                . Html::beginForm(['blog/default/index'], 'post', ['class' => 'navbar-form'])
                 . Html::submitButton(
                     'Панель управления',
                     ['class' => 'btn btn-link']
                 )
-                   
-. Html::endForm()
-            
+
+                . Html::endForm()
+                .'</li><li>'
+
                 . Html::beginForm(['/site/logout'], 'post', ['class' => 'navbar-form'])
                 . Html::submitButton(
                     'Выход (' . Yii::$app->user->identity->username . ')',
@@ -66,6 +67,8 @@ AppAsset::register($this);
                 . Html::endForm()
                 
             )
+
+
         ],
     ]);
     NavBar::end();
